@@ -12,7 +12,7 @@ class IndexView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['latest_stories'] = NewsStory.objects.all()[:4] #get all the news stories, but only take the first 4
-        context['all_stories'] = NewsStory.objects.all() #get all the stories
+        context['all_stories'] = NewsStory.objects.all() #get all the
         return context  
     
 

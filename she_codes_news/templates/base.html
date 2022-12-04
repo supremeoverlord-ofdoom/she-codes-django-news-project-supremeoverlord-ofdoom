@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,12 +11,7 @@
       href="https://fonts.googleapis.com/css?family=Manjari&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static
-            'styles.css' %}"
-    />
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
   </head>
 
   <body>
@@ -28,7 +24,6 @@
       <!-- include nav here -->
     </header>
 
-    <!-- content blocks here -->
     {% block content %}{% endblock %}
   </body>
 </html>
