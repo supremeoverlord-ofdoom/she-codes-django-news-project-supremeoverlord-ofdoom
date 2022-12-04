@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    {% block stylesheets %}{% endblock %}
   </head>
 
   <body>
@@ -21,7 +22,7 @@
           <h1>She {Codes} News</h1>
         </a>
       </div>
-      <!-- include nav here -->
+      {% include './nav.html' %}
     </header>
 
     {% block content %}{% endblock %}
