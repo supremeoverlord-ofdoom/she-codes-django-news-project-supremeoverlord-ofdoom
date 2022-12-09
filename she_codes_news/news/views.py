@@ -11,7 +11,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         '''Return all news stories.'''
-        return NewsStory.objects.all()  # get news stroies and use them in index view
+        return NewsStory.objects.all()  # get news stories and use them in index view
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -27,7 +27,11 @@ class StoryView(generic.DetailView):
     context_object_name = 'story'
 
 class AddStoryView(generic.CreateView):
-     form_class = StoryForm
-     context_object_name = 'storyForm'
-     template_name = 'news/createStory.html'
-     success_url = reverse_lazy('news:index')
+    form_class = StoryForm
+    context_object_name = 'storyForm'
+    template_name = 'news/createStory.html'
+    success_url = reverse_lazy('news:index')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
