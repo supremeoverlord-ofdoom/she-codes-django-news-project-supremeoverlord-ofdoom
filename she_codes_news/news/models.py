@@ -9,6 +9,6 @@ class NewsStory(models.Model):
         )
     pub_date = models.DateTimeField()
     content = models.TextField() #if you want long text rather than in charfield
-
+    news_image = models.URLField(blank=True) #ADDED IN:  a field to the NewsStory model for an image url 
 
 #created the form but not the answers
