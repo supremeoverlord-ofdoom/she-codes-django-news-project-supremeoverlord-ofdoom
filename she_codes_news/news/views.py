@@ -11,13 +11,13 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         '''Return all news stories.'''
-        return NewsStory.objects.all()  # get news stories and use them in index view
+        return NewsStory.objects.all()   #.order_by('-pub_date')  # get news stories and use them in index view ADDED IN: ordering news stories newest to oldest but i don't think its working
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # get all the news stories, but only take the first 4
-        context['latest_stories'] = NewsStory.objects.all()[:4]
-        context['all_stories'] = NewsStory.objects.all()  # get all the
+        context['latest_stories'] = NewsStory.objects.all().order_by('-pub_date')[:4] #ADDED IN: ordering news stories newest to oldest 
+        context['all_stories'] = NewsStory.objects.all().order_by('-pub_date')  #ADDED IN: ordering news stories newest to oldest 
         return context
 
 
