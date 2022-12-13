@@ -18,3 +18,4 @@ class UserProfileView(generic.DetailView):
         context = super().get_context_data(**kwargs)
         context['user_stories'] = NewsStory.objects.filter(author=self.kwargs['pk'])
         return context
+
