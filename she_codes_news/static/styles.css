@@ -17,9 +17,9 @@ header {
     border-bottom: 1px solid #000;
 }
 
-img {
+/* img {
     filter: grayscale(100%);
-}
+} */
 
 h1 {
     /* font-family: 'Montserrat Subrayada', sans-serif; */
@@ -31,7 +31,8 @@ h1 {
 
 h2 {
    font-family: 'Domine', sans-serif;
-   letter-spacing: 0.25px; 
+   letter-spacing: 0.25px;
+   font-size: 2rem;
 }
 
 h3 {
@@ -44,10 +45,18 @@ h3 {
 h4 {
     font-family: 'Domine', sans-serif;
     letter-spacing: 0.25px; 
-    font-size: 2rem;
     margin: 0;
 }
 
+#index-heading {
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', monospace;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    /* border-top: #000 1px solid; */
+}
 #header-text {
     /* flex-basis: 80%;
     display: flex; */
@@ -75,5 +84,5 @@ a {
 }
 
 a, p {
-    font-family: 'Lusitano', monospace;
+    font-family: 'Lusitana', monospace;
 }
