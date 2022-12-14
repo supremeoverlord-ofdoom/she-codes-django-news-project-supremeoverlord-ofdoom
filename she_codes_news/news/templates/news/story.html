@@ -3,18 +3,17 @@
 {% endblock %} {% block content %}
 
 <div id="story-wrapper">
-  <h2>{{ story.title }}</h2>
-  <h4>By {{ story.author }}, {{ story.pub_date }}</h4>
-  <div id="story-content">
     {% if story.news_image %}    <!-- {# if position < 5 #} -->
       <img src="{{ story.news_image }}">
     {% else %}
       <img src="https://picsum.photos/300?random">
     {% endif %}
+  <h2>{{ story.title }}</h2>
+  <h4>By {{ story.author }}, {{ story.pub_date }}</h4>
+  <div id="story-content">
     {{ story.content|linebreaks }}
   </div>
-  <h5 href="{% url 'news:profileDetail' story.author.id %}">
-    View author profile and read more stories by {{ story.author }}</h5>
+  <a href="{% url 'news:profileDetail' story.author.id %}">View author profile and read more stories by {{ story.author }}</a>
 </div>
 
 {% endblock %}

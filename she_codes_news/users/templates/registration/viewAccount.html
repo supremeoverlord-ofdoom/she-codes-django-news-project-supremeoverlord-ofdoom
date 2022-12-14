@@ -7,16 +7,15 @@
 
 {% block content %}
 
-<h2> Author Profile </h2>
+<h2 id="profile-heading"> My Profile </h2>
 
-<a> Author: {{ customuser.username }}</a>
+<div id="user-details">
+<a> Username: {{ customuser.username }}</a>
+<hr>
 <a> Email: {{ customuser.email }}</a>
+</div>
 
-{% if request.user.is_authenticated %}
-  <a href="{% url 'news:newStory' %}">Write New Story</a>
-{% endif %}
-
-<h2> Author Stories </h2>
+<h2 id="profile-heading"> My Stories </h2>
 
 <div id="all-stories">
     {% if user_stories %} 
@@ -29,3 +28,4 @@
   </div>
 
 {% endblock %}
+

@@ -6,7 +6,7 @@
 
 body {
     /* background-color: rgb(240, 239, 239); */
-    background-color: #fff9ed;
+    background-color: #F9F1F0;
 }
 
 header {
@@ -57,6 +57,8 @@ h4 {
     margin-bottom: 5px;
     /* border-top: #000 1px solid; */
 }
+
+
 #header-text {
     /* flex-basis: 80%;
     display: flex; */
@@ -75,6 +77,10 @@ header a {
     font-family: 'Nunito', monospace;
     letter-spacing: 2pt;
     text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 a {
     font-family: monospace;
