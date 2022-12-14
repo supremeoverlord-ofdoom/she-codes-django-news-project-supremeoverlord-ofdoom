@@ -13,6 +13,8 @@
     {% endif %}
     {{ story.content|linebreaks }}
   </div>
+  <a href="{% url 'news:profileDetail' story.author.id %}">
+    View author profile and read more stories by {{ story.author }}</a>
 </div>
 
 {% endblock %}

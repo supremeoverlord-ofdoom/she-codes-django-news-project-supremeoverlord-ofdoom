@@ -2,7 +2,7 @@ from django.views import generic
 from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
-
+from django.contrib.auth import get_user_model
 # class based views
 
 
@@ -35,3 +35,12 @@ class AddStoryView(generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class AuthorProfileView(generic.DetailView):
+    model = get_user_model()
+    template_name = 'news/profileDetail.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['author_stories'] = NewsStory.objects.filter(author=self.kwargs['pk'])
+        return context
