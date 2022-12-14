@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Lusitana&family=Nunito:wght@300&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+    /* background-color: rgb(240, 239, 239); */
+    background-color: #fff9ed;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
     border-bottom: 1px solid #000;
 }
 
@@ -16,24 +22,36 @@ img {
 }
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    font-family: 'Domine', sans-serif;
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   font-family: 'Domine', sans-serif;
+   letter-spacing: 0.25px; 
 }
 
 h3 {
+    font-family: 'Domine', sans-serif;
+    letter-spacing: 0.25px; 
+    font-size: 2rem;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Domine', sans-serif;
+    letter-spacing: 0.25px; 
     font-size: 2rem;
     margin: 0;
 }
 
 #header-text {
-    flex-basis: 80%;
-    display: flex;
+    /* flex-basis: 80%;
+    display: flex; */
+    padding: 2%;
 }
 
 nav {
@@ -41,14 +59,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding-right: 2%;
 }
 
+header a {
+    font-family: 'Nunito', monospace;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+}
 a {
+    font-family: monospace;
     margin: 2px;
     text-decoration: none;
     color: #000;
 }
 
 a, p {
-    font-family: monospace;
+    font-family: 'Lusitano', monospace;
 }
