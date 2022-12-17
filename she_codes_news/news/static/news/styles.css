@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Lusitana&family=Nunito:ital,wght@0,300;1,300&display=swap');
 
+/* *{
+    border: solid black;
+} */
+
+
+
 .story-card {
     margin: 10px;
     /* border: 1px solid #000; */
@@ -135,6 +141,7 @@ p {
     /* border-top: #000 1px solid; */
 }
 
+
 #profile-story-titles {
     list-style: none;
     display: flex;
@@ -177,4 +184,57 @@ hr {
     background-color: black;
     height: 2px;
     margin: 1%;
+}
+
+/* login page */
+
+#login-block {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+/* input[type="submit" i] {
+    color: #D48C70;
+} */
+/* form {
+    align-items: center;
+} */
+button {
+    color:white;
+    background-color: #D48C70;
+    font-size: 16px;
+    border:solid 1px white;
+    margin-left: 30%;
+    margin-left: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#page-link {
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito';
+    font-size: 16px;
+    letter-spacing: 2pt;
+
+}
+
+#page-link:hover {
+    text-decoration: underline;
+}
+
+.user-button:hover {
+    background-color: #F8AFA6;
+}
+
+form p {
+    font-family: 'Lusitana', monospace;
+    font-size: 18px;
+}
+
+#login-text-item {
+    font-size: 18px;
 }

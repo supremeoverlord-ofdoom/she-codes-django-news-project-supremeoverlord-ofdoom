@@ -1,14 +1,22 @@
 {% extends 'base.html' %}
+{% load static %} 
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}"/>
+{% endblock %} 
 
 {% block content %}
-<h2>Login</h2>
-<form method="post">
-     {% csrf_token %}
-     {{ form.as_p }}
-     <button type="submit">Login</button>
-</form>
+<h2 id=profile-heading>Login</h2>
+<div id="login-block">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="user-button">Login</button>
+    </form>
+</div>
 
-<h4>Don't have an account?</h4>
-<a href="{% url 'users:createAccount' %}">Create One Here</a>
+<p id="login-text-item">Don't have an account?</p>
+<a href="{% url 'users:createAccount' %}" id="page-link">Create One Here</a>
+
 {% endblock %}
 
