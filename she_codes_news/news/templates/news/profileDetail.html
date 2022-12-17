@@ -13,15 +13,15 @@
 <h2 id=profile-heading>Titles of Works</h2>
 
 <ul id="profile-story-titles">
-{% for story in customuser.newsstory_set.all %}
+{% for story in customuser.stories.all %}
     <li>{{ story.title }}</li>
 {% endfor %}
 </ul>
 <h2 id=profile-heading> All Articles</h2>
 
 <div id="all-stories">
-    {% if author_stories %} 
-      {% for story in author_stories %} 
+    {% if customuser.stories.all %} 
+      {% for story in customuser.stories.all %} 
         {% include "news/storyCard.html" with story=story %} 
       {% endfor %} 
     {% else %}

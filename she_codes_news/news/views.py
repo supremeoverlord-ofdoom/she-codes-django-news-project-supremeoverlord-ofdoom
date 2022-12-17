@@ -24,7 +24,7 @@ class IndexView(generic.ListView):
 class StoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/story.html'
-    context_object_name = 'story'
+    context_object_name = 'story' #overrrides 
 
 class AddStoryView(generic.CreateView):
     form_class = StoryForm
@@ -40,7 +40,7 @@ class AuthorProfileView(generic.DetailView):
     model = get_user_model()
     template_name = 'news/profileDetail.html'
     
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['author_stories'] = NewsStory.objects.filter(author=self.kwargs['pk'])
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['author_stories'] = NewsStory.objects.filter(author=self.kwargs['pk'])
+    #     return context
