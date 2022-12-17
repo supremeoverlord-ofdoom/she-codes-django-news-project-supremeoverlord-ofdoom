@@ -268,3 +268,27 @@ form p {
     margin-left: 28%;
 }
 
+/* create story page */
+#create-story-block {
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 5%;
+}
+
+#create-story-block button {
+    margin-left: 33%;
+}
+
+#create-story-block input[type="text" i] {
+    min-width: 600px;
+}
+
+#create-story-block textarea {
+    min-width: 800px;
+
+}
+
+#create-story-block input[type="url" i] {
+    min-width: 600px;
+}
