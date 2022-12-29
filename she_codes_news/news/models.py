@@ -5,7 +5,7 @@ class NewsStory(models.Model):
     title = models.CharField(max_length=200)
     author = models.ForeignKey(
         get_user_model(),
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,related_name="stories" #named this stories - so to call related stories for a customer can use customeruser.stories
         )
     pub_date = models.DateTimeField()
     content = models.TextField() #if you want long text rather than in charfield

@@ -1,11 +1,18 @@
 {% extends 'base.html' %}
+{% load static %} 
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}"/>
+{% endblock %} 
 
 {% block content %}
-<h2>Create Account</h2>
-<form method="post">
-    {% csrf_token %} <!-- security feature  -->
-    {{ form.as_p }}
-    <button type="submit">Create Account</button>
-</form>
+<h2 id="profile-heading">Create Account</h2>
+<div id="create-account-block">
+    <form method="post">
+        {% csrf_token %} <!-- security feature  -->
+        {{ form.as_p }}
+        <button type="submit" class="user-button">Create Account</button>
+    </form>
+</div>
 {% endblock %}
 

@@ -7,20 +7,21 @@
 
 {% block content %}
 
-<h2> Author Profile: {{ customuser.username }}</h2>
+<h2 id=profile-title>Author Profile</h2>
+<h2 id=profile-author>{{ customuser.username }}</h2>
 
-<h3>Titles of Works</h3>
+<h2 id=profile-heading>Titles of Works</h2>
 
-<ul>
-{% for story in customuser.newsstory_set.all %}
+<ul id="profile-story-titles">
+{% for story in customuser.stories.all %}
     <li>{{ story.title }}</li>
 {% endfor %}
 </ul>
-<h4> All Articles</h4>
+<h2 id=profile-heading> All Articles</h2>
 
 <div id="all-stories">
-    {% if author_stories %} 
-      {% for story in author_stories %} 
+    {% if customuser.stories.all %} 
+      {% for story in customuser.stories.all %} 
         {% include "news/storyCard.html" with story=story %} 
       {% endfor %} 
     {% else %}
