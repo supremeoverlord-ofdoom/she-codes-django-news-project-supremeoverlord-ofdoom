@@ -1,8 +1,19 @@
+{% extends "base.html" %} {% load static %} {% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}"/>
+{% endblock %} {% block content %}
+
 <div id="story-wrapper">
-    <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</h4>
-    <div id="story-content">
-        <img src="{% static '/news/images/placeholder-5.jpg' %}">
-        {{ story.content|linebreaks }}
-    </div>
+    {% if story.news_image %}    <!-- {# if position < 5 #} -->
+      <img src="{{ story.news_image }}">
+    {% else %}
+      <img src="https://picsum.photos/300?random">
+    {% endif %}
+  <h2>{{ story.title }}</h2>
+  <h4>By {{ story.author }}, {{ story.pub_date }}</h4>
+  <div id="story-content">
+    {{ story.content|linebreaks }}
+  </div>
+  <a href="{% url 'news:profileDetail' story.author.id %}">View author profile and read more stories by {{ story.author }}</a>
 </div>
+
+{% endblock %}
